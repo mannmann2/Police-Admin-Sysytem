@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{%block head %}Contact Us | {{block.super}} {% endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class='col-sm-4 col-sm-offset-4 text-align-center'>
+
+        <br>
+        <h1>{{ title }}</h1>
+        <br>
+
+        <form method="POST" action=""> 
+            <div style="text-align: left;">
+
+                {% csrf_token %}
+                {{form | crispy}}
+            
+            </div>
+            <br>
+            <input class='btn btn-primary' type="submit" value="Submit" >
+        </form>
+    
+    </div>
+</div>
+
+{% endblock %}

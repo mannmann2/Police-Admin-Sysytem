@@ -1,0 +1,62 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{%block head %}POLHQ{% endblock%}</title>
+
+    {%include 'head_css.html' %}
+
+    <style> 
+
+    /*@font-face {
+      font-family: roblig;
+      src: url({% static 'fonts/Roboto-Light-webfont.woff' %});
+      } */
+
+      .row2 {
+        background-color: #1A237E;
+        color: #EFEFFF;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .navbar-btn {
+        margin-left: 8px;
+      }
+
+      {% block style %} {% endblock %} 
+    
+    </style>
+
+  </head>
+
+  <body>
+
+    {% include 'navbar.html' %}
+
+    <div class="row2">
+      <p><b><i>CONSTANT VIGILANCE</i></b></p>
+    </div>
+
+    {% block tron %} {% endblock %}
+
+
+    <div class="container">
+    
+      {% block content %} {% endblock %} 
+
+      {% include 'javascript.html' %}
+  
+    </div>
+  </body>
+</html>
+

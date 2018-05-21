@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{%block head %}About | {{block.super}} {% endblock%}
+
+
+{% block content %}
+
+<div class="jumbotron text-align-center">
+    
+    <h1><b> {{ title }} </b><br></h1>
+
+        <div class="container">
+            <br><p>The Police Administration System is meant to be a web application maintained by police stations across a region. There are two basic users-Police officers in local police stations and Police Officers in the Head Office. The Police Administration System will provide functionalities like Traffic Fine Registration and Payment, displaying Criminal List, FIR Registration, Message Broadcasting and Passport Verification. Head Office police officers can update the criminal database and acts as the final authority in sending a passport application to the Passport Office. The Police Administration System does away with the model of written records and files as everything is computerized. Registers of FIR complaints as well as documents for passport verification need not be maintained anymore as everything is now done via a database maintained on a server. The Police Administration System serves the objective of being efficient and reliable (in terms of fine collection and storing data).</p>
+        </div>
+</div>
+{% endblock %}

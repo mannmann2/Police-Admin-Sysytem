@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{%block head %}Profile | {{block.super}} {% endblock%}
+
+
+{% block tron %}
+
+<div class="jumbotron">
+    
+    <h1 class='text-align-center'><b>{{ title }}</b><br></h1>
+
+    <div class="text-align-center">
+        <br><p><div style="font-size:36px;font-weight: 600">{{ user }}</div></p><br>
+        <p><b>Name:</b> {{ profile.first_name }} {{ profile.last_name }}</p>
+        <p><b>Email:</b> {{ profile.email }}</p>
+        <p><b>Rank:</b> {{ profile.rank }}</p>
+        <p><b>Badge No:</b> {{ profile.badge_no }}</p>
+        <p><b>Staff Member:</b> {{ profile.is_staff }}</p>
+        <p><b>Superuser:</b> {{ profile.is_superuser }}</p>
+        <p><b>Last Login:</b> {{ profile.last_login }}</p>
+        <p><b>Date Joined:</b> {{ profile.date_joined }}</p>
+    </div>
+
+</div>
+{% endblock %} 

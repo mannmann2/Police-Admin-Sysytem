@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{%block head %}FIR | {{block.super}} {% endblock%}
+
+<style>
+{%block style%}{%endblock%}
+</style>
+
+
+{% block content %}
+
+<div class="row">
+    <div class='col-sm-4 col-sm-offset-4'>
+
+        <h1 class='text-align-center'><br>{{ title }}<br><br></h1>
+
+        <form method="POST" action=".">
+
+        {% csrf_token %}
+        {{form | crispy}}
+        <input class='btn btn-default ' type="submit" value="Submit">
+
+        </form>
+
+    </div>
+</div>
+{% endblock %}

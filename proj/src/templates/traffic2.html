@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{%block head %}Payment | {{block.super}} {% endblock%}
+
+
+
+
+{% block content %}
+
+<div class="row">
+    <div class='col-sm-4 col-sm-offset-4'>
+
+        <h1 class='text-align-center'><br>{{ title }}<br><br></h1>
+
+         {% if status == 0 %}
+
+            <form method="POST" action=".">
+
+            {% csrf_token %}
+
+            {{form | crispy}}
+
+            <input class='btn btn-default ' type="submit" value="Pay">
+
+            </form>
+
+            {% if k == 0 %}
+
+                <p><br>Reciept does not exist. Try again!</p>
+
+            {% endif %}
+
+
+        {% else %}
+
+            <div style="font-size: 24px">
+                <p>Reciept No: {{ reciept_no }}</p>
+                <p>Name: {{ full_name }}</p>
+                <p>Offence: {{ offence }}</p>
+                <p>Amount: {{ amt }}</p>
+                <p>Paid Status: <b>PAID</b></p>
+            </div>
+
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

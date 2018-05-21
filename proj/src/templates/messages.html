@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{%block head %}Messages | {{block.super}} {% endblock%}
+
+
+{% block style %} 
+ 
+.row {
+    padding:24px;
+    margin-bottom: 24px;
+    background-color: #F8F8F8;
+    }
+
+{% endblock %} 
+
+
+
+{% block tron %}
+
+<div class="jumbotron">
+    
+    <h1 class='text-align-center'><b><i> {{ title }} </i></b><br><br></h1>
+
+    
+    {% for mess in messages1 %}
+
+        <div class='container'>
+    
+            <div class="row">
+    
+                <div class='col-sm-5'>
+                    <p><b>Name:</b> {{ mess.full_name }}</p>
+                    <p><b>Email:</b> {{ mess.email }}</p>
+                    <p><b>Rank:</b> {{ mess.rank }}</p>
+                    <p><b>Badge No:</b> {{ mess.badge_no }}</p>
+                    <p><b>Date, Time:</b> {{ mess.timestamp }}</p>
+                </div>
+
+                <div class='col-sm-7' style="text-align: center">
+                    <p><b>Message</b></p><br>
+                    <p style="font-size: 28px; font-weight: 300">{{ mess.message }}</p>
+                </div>
+
+            </div>
+            <br>
+        </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %} 
+
+
+

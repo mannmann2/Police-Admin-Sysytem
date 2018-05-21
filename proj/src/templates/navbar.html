@@ -1,0 +1,68 @@
+ {% load staticfiles %}
+
+ <!-- Static navbar -->
+      <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="col-sm-5 nav navbar-nav">
+              
+              <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu
+                <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+
+                   <li><a {% if request.user.is_authenticated %} href="{% url 'traffic' %}" {% else %} href="{% url 'auth_login' %}" {% endif %} >Traffic Fine Registration</a></li>
+                   
+                  <li><a {% if request.user.is_authenticated %} href="{% url 'traffic2' %}" {% else %} href="{% url 'auth_login' %}" {% endif %}>Traffic Fine Payment</a></li>
+
+                  <li><a {% if request.user.is_authenticated %} href="{% url 'FIR' %}" {% else %} href="{% url 'auth_login' %}" {% endif %}>FIR Registration</a></li>
+
+                  <li><a href="{% url 'wanted' %}">Wanted List</a></li>
+
+                  <li><a href="{% url 'passp' %}">Passport Verification</a></li>
+                </ul>
+              </li>
+
+              <li class="active"><a href="{% url 'home' %}">Home<span class="sr-only"></span></a></li>
+              <li><a href="{% url 'contact' %}">Contact HQ</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+            {% if request.user.is_authenticated %}
+              
+              <li><a href="{% url 'mess' %}">Messages <span class="badge">{{ messages.count }}</span> </a></li>
+
+              <li><a href="{% url 'profile' %}">{{ request.user }}</a></li>
+              <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+              
+              {% else %}
+              
+              <li><p type="button" class="navbar-btn">
+              <a class="btn btn-primary" href="{% url 'auth_login' %}">Login</a>
+              </p></li>
+              
+              <li><p type="button" class="navbar-btn">
+              <a class="btn btn-danger" href="{% url 'registration_register' %}">Register</a>
+              </p></li>
+              
+              {% endif %}
+            </ul>
+          </div><!--/.nav-collapse <button type="button" class="btn btn-default navbar-btn">Sign in</button>-->
+        </div>
+      </nav> 
+
+      

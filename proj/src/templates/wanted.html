@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{%block head %}WANTED | {{block.super}} {% endblock%}
+
+<style>
+{%block style%}
+
+
+.image {
+    height: 360px;
+    margin-left: -15px
+    
+}
+
+.row {
+    margin-bottom: 24px;
+    background-color: #F8F8F8;
+
+}
+
+
+{%endblock%}
+</style>
+
+
+{% block tron %}
+<div class="jumbotron">
+    
+    <h1 class='text-align-center'><i> {{ title }} </i><br><br></h1>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="image" src="{% static 'img/joker.jpg' %}" style="width: 530px" />
+            </div>
+
+            <div class="col-sm-6" style="margin-top:-36px;">
+                <p><br><br><b>Name:</b> Unknown</p>
+                <p><b>Aliases:</b><i> The Joker</i>, Domino Killer, Gravedigger, Clown Prince of Crime, Harlequin of Hate, Red Hood, Mr. J, King of Arkham, Public Enemy #1, White Duke of Death, Patient 0, Nemesis of the Knight, Mephistopheles of Mirth</p>
+                <p><b>Known Accomplices:</b> Harley Quinn, Killer Croc</p>
+                <p><b>Wanted For: </b>The murder of Jason Todd, large scale Terrorism in Gotham City, attempting to murder Barbara Gordon, and many more...</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="image" src="{% static 'img/quinn.jpg' %}" style="width: 530px" />
+            </div>
+
+            <div class="col-sm-6">
+                <p><br><br><b>Name:</b> Harleen Francis Quinzel</p>
+                <p><b>Aliases:</b> Harley Quinn</p>
+                <p><b>Known Accomplices:</b> The Joker, Poison Ivy</p>
+                <p><b>Wanted For:</b> Being an accomplice to The Joker, aiding him in his acts of terrorism and causing mass anguish and disruption.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="image" src="{% static 'img/vader.jpg' %}" style="width: 530px" />
+            </div>
+
+            <div class="col-sm-6">
+                <p><br><br><b>Name:</b> Anakin Skywalker</p>
+                <p><b>Aliases:</b> Darth Vader, Lord Vader</p>
+                <p><b>Known Accomplices:</b> Darth Sidious aka. Emperor Palpatine</p>
+                <p><b>Wanted For:</b> Crimes against the Republic and murders of innumerable Jedi Knights.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="image" src="{% static 'img/voldy.jpg' %}" style="width: 530px" />
+            </div>
+
+            <div class="col-sm-6" style="margin-top:-42px; margin-left: -24px;">
+                <p><br><br><b>Name:</b> Tom Marvolo Riddle</p>
+                <p><b>Aliases:</b> Lord Voldemort, The Dark Lord, He Who Must Not Be Named, You Know Who </p>
+                <p><b>Known Accomplices:</b> The Malfoy Family, Bellatrix Lestrange, Severus Snape, Peter Pettigrew</p>
+                <p><b>Wanted For:</b> The murder of James and Lily Potter, murder and torture of members of The Order of the Phoenix, partaking in Dark Magic, invading the Ministy of Magic, revealing magic and magical abilities to Muggles, amongst many others.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="image" src="{% static 'img/lec.jpg' %}" style="width: 340px"/>
+            </div>
+
+            <div class="col-sm-8">
+                <p><br><br><b>Name:</b> Dr. Hannibal Lecter</p>
+                <p><b>Aliases:</b> Hannibal the Cannibal, Chesapeake Ripper</p>
+                <p><b>Known Accomplices:</b> None</p>
+                <p><b>Wanted For:</b> Various murders and cannibalistic activies.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="image" src="{% static 'img/snow.jpg' %}" style="width: 340px"/>
+            </div>
+
+            <div class="col-sm-8">
+                <p><br><br><b>Name:</b> Ramsay Bolton (formerly <i>Snow</i>)</p>
+                <p><b>Aliases:</b> Lord of the Hornwood, Lord of Winterfell, Castellan of the Dreadfort</p>
+                <p><b>Known Accomplices:</b> Roose Bolton, Miranda</p>
+                <p><b>Wanted For:</b> The murder of his father, Lord Bolton, the murder of various innocents up North.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %} 
+
+
+

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{%block head %}Welcome | {{block.super}} {% endblock%}
+
+<style>
+{%block style%}{%endblock%}
+</style>
+
+
+{% block tron %}
+
+<div class="jumbotron" style="background-color: #0D47A1; color: #F0FFF0">
+    
+    <div class="row">
+
+        <div class='col-sm-2'>
+            <img src="{% static 'img/logo2.jpg' %}" style="opacity: 0.6; height: 360px; margin: -48px; margin-left: 0px">
+        </div>
+        
+
+        <div class='col-sm-6 col-sm-offset-1' style="text-align: center; padding: 18px;">
+            <p style="font-size: 42px;"><i><b>POLICE ADMINISTRATION SYSTEM </b></i></p>
+            <h3>{{title}}</h3> 
+        </div>
+
+
+        <div class='col-sm-2'>
+            <img src="{% static 'img/logo1.jpg' %}" style="opacity: 0.5; height: 360px; margin: -48px; margin-left: -24px;margin-right: 0px">
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
+
+
+{% block content%}
+
+<!-- <div class="row">
+  <div class="col-sm-3 pull-right">
+
+        <p class="lead text-align-center ">{{ Title }}</p>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input class="btn btn-lg btn-primary"type="submit" value="Sign Up" />
+
+        </form>
+    </div>
+</div>  -->
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
